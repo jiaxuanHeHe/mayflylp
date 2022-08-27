@@ -169,25 +169,6 @@ footer {
     }
 }
 
-@keyframes reveal {
-    from {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}
-
-@keyframes moveTitle {
-    from {
-        transform: translateY(-20%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
 
 @media only screen and (min-width: 523px) {
     body {
@@ -256,19 +237,37 @@ footer {
     }
 
     section.info {
-        margin: 0 6em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
         .feature {
             display: grid;
             grid-template-columns: repeat(2, auto);
             gap: 3em;
 
             img {
-                width: 25em;
+                width: 22em;
             }
 
             .content {
+                width: 22em;
                 margin: auto 0;
             }
+        }
+
+        .feature.row2 {
+            grid-template-areas: 
+            "left right";
+
+            img {
+                grid-area: left;
+                padding-right: 1.5em;
+            }
+
+            .content {
+                padding-left: .1em;
+            }
+
         }
     }
 
@@ -305,10 +304,60 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
+
     section.info {
         margin-left: auto;
         margin-right: auto;
         width: 900px;
+        .feature {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 3em;
+
+            img {
+                width: 25em;
+            }
+
+            .content {
+                width: 25em;
+                margin: auto 0;
+            }
+        }
+
+        .feature.row2 {
+            grid-template-areas: 
+            "left right";
+
+            img {
+                grid-area: left;
+                padding-right: 2.4em;
+            }
+
+            .content {
+                padding-right: 1.7em;
+            }
+
+        }
     }
 }
 
+
+@keyframes reveal {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes moveTitle {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
