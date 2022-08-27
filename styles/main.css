@@ -1,0 +1,292 @@
+body {
+  margin: 1.5em;
+  font-family: Lato, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  position: absolute;
+  background: url("../assets/ocean.jpg");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-position-x: 60%;
+  background-position-y: 70%;
+  background-size: cover;
+  -webkit-animation: reveal 1.5s forwards;
+          animation: reveal 1.5s forwards;
+}
+
+.logo_header {
+  height: 1.5em;
+  width: auto;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  display: none;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5em;
+  margin-left: -1em;
+}
+nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+}
+nav ul a:hover {
+  background: rgb(208, 208, 208);
+}
+nav .close {
+  float: right;
+  width: 2em;
+  margin: 1.5em;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .menu {
+  width: 2.5em;
+  margin-top: -0.5em;
+  cursor: pointer;
+}
+header .menu path {
+  fill: white;
+}
+
+section.hero {
+  height: 75vh;
+}
+section.hero .slogan {
+  margin-top: 2em;
+  font-size: 5rem;
+  color: white;
+  -webkit-animation: moveTitle 1.5s forwards;
+          animation: moveTitle 1.5s forwards;
+}
+
+section.info .title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+section.info .desc {
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size: 1.25em;
+}
+section.info img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 60vh;
+  margin-top: 1.5em;
+}
+section.info .feature {
+  margin-bottom: 3em;
+}
+section.info .content1 {
+  padding: 0.75em 0;
+}
+section.info .content1 p {
+  margin: 0.3em 0;
+}
+section.info .content2 {
+  padding: 0.75em 0;
+}
+section.info .content2 p {
+  margin: 0.3em 0;
+}
+section.info .content3 {
+  padding: 0.75em 0;
+}
+section.info .content3 p {
+  margin: 0.3em 0;
+}
+section.info .content4 {
+  padding: 0.75em 0;
+}
+section.info .content4 p {
+  margin: 0.3em 0;
+}
+
+footer {
+  margin-top: 8em;
+  margin-bottom: -2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+footer .logo_footer {
+  width: 5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer .social_media {
+  margin-top: 2em;
+  margin-bottom: 0.2em;
+  display: flex;
+  justify-content: space-between;
+}
+footer .agb {
+  font-size: 0.7em;
+  display: flex;
+  justify-content: space-between;
+}
+
+@-webkit-keyframes reveal {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes reveal {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes moveTitle {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveTitle {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media only screen and (min-width: 523px) {
+  body {
+    margin: 3em 3em;
+  }
+  section.hero {
+    height: 65vh;
+  }
+  section.hero .slogan {
+    margin-top: 3em;
+    font-size: 5rem;
+    color: white;
+    -webkit-animation: moveTitle 1.5s forwards;
+            animation: moveTitle 1.5s forwards;
+  }
+  section.info img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  section.hero .slogan {
+    text-align: center;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    background: none;
+    height: auto;
+    width: auto;
+  }
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  nav .close {
+    display: none;
+  }
+  section.info {
+    margin: 0 6em;
+  }
+  section.info .feature {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3em;
+  }
+  section.info .feature img {
+    width: 25em;
+  }
+  section.info .feature .content {
+    margin: auto 0;
+  }
+  footer {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+  }
+  footer .logo_footer {
+    order: 2;
+    width: 6em;
+  }
+  footer .social_media {
+    order: 3;
+    margin: auto 0;
+  }
+  footer .social_media svg {
+    margin: 0 0.4em;
+  }
+  footer .agb {
+    order: 1;
+    font-size: 0.75rem;
+    display: block;
+  }
+  footer .agb p {
+    margin: 0 0.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section.info {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+  }
+}/*# sourceMappingURL=main.css.map */
