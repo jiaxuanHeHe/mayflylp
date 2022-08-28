@@ -34,18 +34,18 @@ nav {
   right: 0;
   background: white;
   height: 100vh;
-  width: 50%;
+  width: 45%;
   z-index: 999;
   text-transform: uppercase;
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
-  display: none;
 }
 nav ul {
   list-style-type: none;
   padding: 0;
   margin-top: 5em;
   margin-left: -1em;
+  margin-right: 1em;
 }
 nav ul a {
   color: black;
@@ -53,7 +53,7 @@ nav ul a {
   display: block;
 }
 nav ul a:hover {
-  background: rgb(208, 208, 208);
+  text-decoration: underline;
 }
 nav .close {
   float: right;
@@ -153,6 +153,10 @@ footer .agb {
   font-size: 0.7em;
   display: flex;
   justify-content: space-between;
+}
+
+.open_nav {
+  transform: translateX(0);
 }
 
 @media only screen and (min-width: 523px) {
